@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import { aboutMeData, pages } from "./data/data";
+import data from "./data/data.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +17,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { aboutMeData, pages } = data;
   return (
     <html lang="en">
       <body className={inter.className}>
