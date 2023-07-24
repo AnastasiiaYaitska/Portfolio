@@ -11,6 +11,13 @@
   }
   html {
     font-family: Merriweather, Proxima Nova, sans-serif;
+    background: #dde1e7;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl uppercase font-semibold mb-6;
   }
 }
 
@@ -88,3 +95,15 @@
     background-position: 0 0;
   }
 }
+
+.profileImage {
+  @apply rounded-full;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 4%;
+}
+
+/* section {
+  @apply mb-10;
+} */
