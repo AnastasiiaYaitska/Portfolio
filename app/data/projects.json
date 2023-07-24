@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "title": "Code Builder App",
+      "body": "An app for developers who want to create, save, and share code snippets. Includes authorization via GitHub.",
+      "tools": "Next.js, TypeScript, SWR, Next-auth, Monaco-editor, MongoDB, HTML, CSS",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/HackYourFuture-CPH/class24-project"
+        },
+        {
+          "title": "Live Site",
+          "url": "https://codebuilder.dev/"
+        }
+      ]
+    },
+    {
+      "title": "Meal-sharing App",
+      "body": "An app for those who want to share a meal. The user can create a meal, leave a review about a meal, and place an order.",
+      "tools": "React, Material UI, Formik, Axios, Styled-Components, MySQL, Node.js, JS, HTML, Docker",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/AnastasiiaYaitska/Meal-sharing"
+        },
+        {
+          "title": "Live Site",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "title": "Phone-book App",
+      "body": "Private phone book. The user can register a new account, log into an existing account, add a contact, delete a contact, and search by name.",
+      "tools": "React, Redux, Material UI, Formik, Axios, Styled-Components, JS, HTML",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/AnastasiiaYaitska/phone-book"
+        },
+        {
+          "title": "Live Site",
+          "url": "https://anastasiiayaitska.github.io/phone-book/"
+        }
+      ]
+    },
+    {
+      "title": "Image-gallery App",
+      "body": "An app for images search by name.",
+      "tools": "React using Classes, JS, HTML, Styled-Components",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/AnastasiiaYaitska/Image-Gallery"
+        },
+        {
+          "title": "Live Site",
+          "url": "https://anastasiiayaitska.github.io/Image-Gallery/"
+        }
+      ]
+    },
+    {
+      "title": "Movies App",
+      "body": "An app where users can see trending movie announcements, search movies by name, and see details.",
+      "tools": "React, React-Router-Dom, JS, HTML, Styled-Components",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/AnastasiiaYaitska/movies-reactRoutes"
+        },
+        {
+          "title": "Live Site",
+          "url": "https://anastasiiayaitska.github.io/movies-reactRoutes/"
+        }
+      ]
+    },
+    {
+      "title": "Ice Cream",
+      "body": "A page where users can read about ice cream and see cafe working times and locations.",
+      "tools": "HTML, SASS, JS",
+      "image": "",
+      "links": [
+        {
+          "title": "Source code",
+          "url": "https://github.com/AnastasiiaYaitska/html-css-project"
+        },
+        {
+          "title": "Live Site",
+          "url": "https://anastasiiayaitska.github.io/html-css-project/"
+        }
+      ]
+    }
+  ]
+}
