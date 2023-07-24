@@ -3,8 +3,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = ({ data }) => {
-  const { name, pages } = data;
+type HeaderProps = {
+  name: string;
+  pages: {
+    id: string;
+    label: string;
+    link: string;
+  }[];
+};
+
+const Header = ({ name, pages }: HeaderProps) => {
   return (
     <header className="flex flex-col relative bg-linear-fc5c7d w-full h-32 py-6  bg-header">
       <div className="flex flex-col justify-around h-full px-6  z-10">
