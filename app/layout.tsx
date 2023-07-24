@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./main.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header/Header";
@@ -17,13 +17,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { aboutMeData, pages } = data;
+  const { aboutMeData, pages, ContactMeLinks } = data;
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header data={{ name: aboutMeData.name, pages }} />
-        <main>{children}</main>
-        <Footer />
+        <Header name={aboutMeData.name} pages={pages} />
+        {children}
+        <Footer contactMeLinks={ContactMeLinks} />
       </body>
     </html>
   );
