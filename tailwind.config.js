@@ -35,7 +35,8 @@ module.exports = {
       },
       minHeight: { 50: "55px" },
       boxShadow: {
-        footer: "",
+        footer:
+          " -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);",
       },
       backgroundImage: {
         header: "linear-gradient(to right, #fc5c7d, #6a82fb)",
