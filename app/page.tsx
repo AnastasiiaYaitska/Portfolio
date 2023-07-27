@@ -3,7 +3,7 @@ import data from "./data/data.json";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center sm:mb-32 mb-16">
+    <div className="flex flex-col items-center">
       <section className="flex sm:flex-row sm:w-10/12 mt-10  items-center flex-col w-full">
         <div className="sm:w-1/3 w-full flex justify-center">
           <Image
@@ -37,6 +37,6 @@ export default function Home() {
           />
         </div>
       </section>
-    </main>
+    </div>
   );
 }

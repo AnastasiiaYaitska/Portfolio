@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header name={aboutMeData.name} pages={pages} />
-        {children}
+        <main className=" sm:mb-32 mb-16">{children}</main>
         <Footer contactMeLinks={ContactMeLinks} />
       </body>
     </html>
