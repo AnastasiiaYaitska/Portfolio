@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 type HeaderProps = {
@@ -14,7 +13,11 @@ type HeaderProps = {
 
 const Header = ({ name, pages }: HeaderProps) => {
   return (
-    <header className="flex flex-col relative bg-linear-fc5c7d w-full h-32 py-6  bg-header">
+    <header
+      className="sticky top-0 z-10 flex flex-col relative
+     bg-linear-fc5c7d shadow-footer
+     w-full h-32 py-6  bg-header"
+    >
       <div className="flex flex-col justify-around h-full px-6  z-10">
         <nav className="h-full">
           <ul className="text-right flex flex-row gap-6 justify-end h-full">
@@ -33,15 +36,6 @@ const Header = ({ name, pages }: HeaderProps) => {
         </nav>
         <h1 className="text-white uppercase  text-4xl">{name}</h1>
       </div>
-      {/* <Image
-        priority
-        height={80}
-        width={350}
-        className="w-full h-48 object-contain object-right-bottom absolute mb-6"
-        src="/images/PackagingDesignShutterstock.jpeg"
-        alt="drawing laptop"
-        aria-label="picture"
-      /> */}
     </header>
   );
 };
