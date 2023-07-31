@@ -32,10 +32,10 @@ const ProjectCart = ({ project }: ProjectCartProps) => {
         <p className="text-sm mt-2 min-h-50">Technologies used: {tools}</p>
         <ul className="flex flex-row mt-4 justify-between">
           {links.map(({ title, url }) => (
-            <li key={url} className="flex flex-row">
+            <li key={url} className="flex flex-row ">
               <Link
                 href={url}
-                className="flex flex-row justify-center items-center gap-3"
+                className="flex flex-row flex-wrap justify-center items-center gap-3"
               >
                 {title.includes("code") ? <TfiGithub /> : <BsWindow />}
                 <span>{title}</span>
