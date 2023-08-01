@@ -11,7 +11,10 @@
     "body2": "As a beginner, I am constantly seeking new challenges and projects to work on, collaborate with others, and I believe that working on projects is the best way to learn and grow as a developer.",
     "body3": "When I am not coding, I enjoy spending time with my family and friends. In love with the mountains and nature."
   },
-  "ContactMe": { "title": "Hello here!" },
+  "ContactMe": {
+    "title": "Hello there!",
+    "body": "The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit."
+  },
   "ContactMeLinks": [
     "https://yaitska.anastasiia@gmail.com",
     "https://github.com/AnastasiiaYaitska",
