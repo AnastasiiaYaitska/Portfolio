@@ -37,6 +37,7 @@ module.exports = {
       boxShadow: {
         footer:
           " -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);",
+        card: "inset -10px -10px 15px rgba(255, 255, 255, 0.5),inset 10px 10px 15px rgba(70, 70, 70, 0.12);",
       },
       backgroundImage: {
         header: "linear-gradient(to right, #fc5c7d, #6a82fb)",
