@@ -4,14 +4,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
+  const notify = (message: string, toastType: "success" | "error" | "info") => {
+    return toast(message, {
+      hideProgressBar: true,
+      autoClose: 3000,
+      type: `${toastType}`,
+    });
+  };
 
   const handlerSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = { name, email, message };
-    console.log(data);
     try {
       const response = await fetch("api/contact", {
         method: "POST",
@@ -24,10 +31,12 @@ const Form = () => {
         throw new Error(" HTPP error " + response.status);
       }
       const responseData = await response.json();
-      console.log(responseData);
-      () => toast.success("Hello, this is a toast message!");
+      notify(responseData.message, "success");
     } catch (error: any) {
-      console.log("There was a problem with fetch operation," + error.message);
+      notify(
+        "There was a problem with fetch operation," + error.message,
+        "error"
+      );
     }
     setName("");
     setEmail("");
@@ -102,7 +111,6 @@ const Form = () => {
       <button type="submit" className="px-6 py-2 glow-on-hover">
         Send message
       </button>
-      <ToastContainer />
     </form>
   );
 };
