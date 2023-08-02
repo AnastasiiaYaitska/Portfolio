@@ -11,7 +11,7 @@ const Form = () => {
   const notify = (message: string, toastType: "success" | "error" | "info") => {
     return toast(message, {
       hideProgressBar: true,
-      autoClose: 3000,
+      autoClose: 4000,
       type: `${toastType}`,
     });
   };
