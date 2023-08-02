@@ -1,45 +1,43 @@
+import React from "react";
 import {
     NextRequest,
     NextResponse
 } from "next/server";
+import mongoose from "mongoose";
+import Message from "../../../models/Message";
 
-const fs = require("fs");
-const path = require("path")
 
-export async function POST(request: NextRequest) {
-    const data = await request.json()
-    const filePath = path.resolve(process.cwd(), "app/data/submissions.json");
-    // path.resolve() it creates an absolute path based on the provided arguments.
-    // process.cwd() function returns the current working directory of the Node.js process.The current workin.
-    let submissions: any = []
+export async function POST(req: NextRequest, res: NextResponse) {
+
+    const MONGODB_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGODB_CLUSTER}.ruvxbwk.mongodb.net/`;
+
+    let client;
     try {
-        const data = fs.readFileSync(filePath, "utf8")
-        submissions = JSON.parse(data)
+        client = await mongoose.connect(MONGODB_URL)
+        console.log("DB connected")
     } catch (error) {
-        console.log("Error reading this file", error)
-
+        console.log("There was an error connection to the DB", error)
     }
-    submissions.push(data)
+    const data = await req.json()
+    const { name, email, message } = data;
 
-    try {
-        const newData = JSON.stringify(submissions, null, 2);       //write in JSON file again
-        fs.writeFileSync(filePath, newData, "utf8")
-    } catch (error) {
-        console.log("Error reading this file" + error)
+    if (!name || !email || !message || !email.includes("@") || message.trim() === "" || name.trim() === "") {
+        NextResponse.json({ message: "Invalid input, please fill all the fields" }, { status: 422 });
+        return;
     }
 
-    return NextResponse.json({
-        data,
-        message: "This message was successfully sent"
-    })
+    const newData = {
+        ...data,
+        date: new Date,
+    }
+
+    try {
+        await Message.create(newData)
+        console.log("Message sent")
+        return NextResponse.json({ message: "Thank you for your message!" }, { status: 201 })
+    } catch (error) {
+        console.log("Message could't be sent", error)
+        return NextResponse.json({ message: "Error sending the message" }, { status: 500 })
+
+    }
 }
-
-// Read DB - JSON File
-// Parse the JSON + add the new data + write in JSON file again
-
-// export async function GET() {
-//     return NextResponse.json({
-//         message: "Hi, I am here"
-//     })
-
-// }
