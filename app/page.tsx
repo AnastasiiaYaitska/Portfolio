@@ -1,5 +1,6 @@
 import Image from "next/image";
 import data from "./data/data.json";
+import DownloadBtn from "./components/DownloadBtn/downloadBtn";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
             className="profileImage"
           />
         </div>
-        <div className="p-10 sm:w-2/3 w-full mt-6 sm:mt-10">
+        <div className="flex flex-col p-10 sm:w-2/3 w-full mt-6 sm:mt-10">
           <h2>{data.aboutMeData.title}</h2>
           <p className="text-base">{data.aboutMeData.body}</p>
+          <DownloadBtn />
         </div>
       </section>
       <section className="w-full  shadow-footer p-10 h-full mt-10">
