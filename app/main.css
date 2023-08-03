@@ -136,3 +136,75 @@
 /* section {
   @apply mb-10;
 } */
+.menu {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+
+  background: #dde1e7;
+  transition: transform 0.3s ease;
+  transform-origin: top right;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-open {
+  /* background-color: rgb(255, 255, 255); */
+  height: 300%;
+  width: 75%;
+  font-size: 16px;
+  line-height: 50px;
+
+  padding: 2px 12px 2px 12px;
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-close {
+  transform: scale(0);
+  visibility: visible;
+  opacity: 0;
+  transition: transform 0.3s ease, visibility 0s ease, opacity 0.3s;
+}
+
+.clickButton {
+  height: auto;
+
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  /* position: absolute; */
+  transform: translate(-50%, -50%);
+  /* top: 50%;
+  left: 50%; */
+  border-radius: 50%;
+  border: 20px solid #ececec;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.clickButton::after {
+  /* font-family: FontAwesome; */
+  content: "\f011";
+  color: #7a7a7a;
+  font-size: 70px;
+}
+
+.clicked {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+/* .clicked::after {
+  color: #15e38a;
+} */
