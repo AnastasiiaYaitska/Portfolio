@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
+import { CgCloseO } from "react-icons/cg";
 
 type HeaderProps = {
   pages: {
@@ -23,17 +24,21 @@ const BurgerMenu = ({ pages }: HeaderProps) => {
       <div
         className={
           isOpen
-            ? "shadow-footer menu menu-open"
-            : "shadow-footer  menu menu-close"
+            ? "shadow-footer menu menu-open p-0"
+            : "shadow-footer  menu menu-close p-0"
         }
       >
-        <ul className="text-right flex flex-col gap-6 justify-end h-full">
+        <button onClick={toggleMenu}>
+          {" "}
+          <CgCloseO size="1.5rem" />
+        </button>
+        <ul className="text-right flex flex-col gap-6 justify-center h-full">
           {pages.map(({ id, label, link }) => (
-            <li key={id} className=" ">
+            <li key={id} className="hover:shadow-footer ">
               <Link
                 aria-label={label}
                 href={link}
-                className="px-6 py-2"
+                className="px-6 py-2 text-lg font-medium"
                 onClick={toggleMenu}
               >
                 {label}
