@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col p-10 sm:w-2/3 w-full mt-6 sm:mt-10">
           <h2>{data.aboutMeData.title}</h2>
-          <p className="text-base">{data.aboutMeData.body}</p>
+          <p className="text-base pb-10">{data.aboutMeData.body}</p>
           <DownloadBtn />
         </div>
       </section>
