@@ -7,13 +7,13 @@
   "aboutMeData": {
     "name": "Anastasiia Yaitska",
     "title": "Hello! I'm Anastasiia Yaitska",
-    "body": "A frontend developer with a passion for solving problems with code. I started my journey a year ago, and since then I've been constantly learning and improving my skills.",
-    "body2": "As a beginner, I am constantly seeking new challenges and projects to work on, collaborate with others, and I believe that working on projects is the best way to learn and grow as a developer.",
-    "body3": "When I am not coding, I enjoy spending time with my family and friends. In love with the mountains and nature."
+    "body": "A highly motivated and enthusiastic front-end developer with a strong passion for solving problems with code and creating engaging and user-friendly web applications. Despite embarking on my web development journey just a year ago, I have made remarkable strides in honing my skills. My toolkit includes proficiency in HTML, CSS, JavaScript, and modern frontend frameworks such as Nextjs and React. With a commitment to continuous learning, I am dedicated to staying up-to-date with industry trends and best practices.",
+    "body2": "As a beginner, I am constantly seeking new challenges and projects to work on, collaborate with others, and I believe that working on projects is the best way to learn and grow as a developer. I completed comprehensive web development training through HackYourFuture's curriculum. This training provided me with expertise in various technologies, including HTML, CSS, responsive web design, JavaScript, TypeScript, React, Node.js, Express.js, and databases. I am well-versed in version control using Git and project management using Jira.",
+    "body3": "When I am not coding, I enjoy spending time with my family and friends. In love with the mountains and nature.I also try to develop along with new technologies, so I decided to be a volunteer at GoTo Aarhus software conferences."
   },
   "ContactMe": {
     "title": "Hello there!",
-    "body": "The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit."
+    "body": "Thank you for considering my profile. I am eager for the chance to contribute my skills to a dynamic and collaborative team as a junior frontend developer."
   },
   "ContactMeLinks": [
     "https://yaitska.anastasiia@gmail.com",
