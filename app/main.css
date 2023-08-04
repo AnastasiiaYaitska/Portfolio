@@ -97,6 +97,11 @@
   }
 }
 
+.active {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
+}
+
 .profileImage {
   @apply rounded-full;
   max-width: 16rem;
@@ -133,9 +138,7 @@
   color: #111;
   margin-bottom: 0;
 }
-/* section {
-  @apply mb-10;
-} */
+
 .menu {
   padding: 0;
   position: absolute;
@@ -152,7 +155,6 @@
 }
 
 .menu-open {
-  /* background-color: rgb(255, 255, 255); */
   height: 300%;
   width: 75%;
   font-size: 16px;
@@ -173,15 +175,10 @@
 
 .clickButton {
   height: auto;
-  /* width: 5rem; */
   padding: 1rem 2rem;
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
     10px 10px 15px rgba(70, 70, 70, 0.12);
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
-  /* top: 50%;
-  left: 50%; */
-  border-radius: 50%;
+  border-radius: 1rem;
   border: 20px solid #ececec;
   outline: none;
   display: flex;
@@ -198,20 +195,3 @@
     inset -10px -10px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
-/* .clickButton::after { */
-/* font-family: FontAwesome; */
-/* content: "\f011";
-  color: #7a7a7a;
-  font-size: 70px;
-} */
-/* 
-.clicked {
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.12),
-    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
-} */
-
-/* .clicked::after {
-  color: #15e38a;
-} */

@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { usePathname } from "next/navigation";
 
 type HeaderProps = {
   name: string;
@@ -14,10 +15,9 @@ type HeaderProps = {
 };
 
 const Header = ({ name, pages }: HeaderProps) => {
+  const currentRoute = usePathname();
   const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
-  // if (isMobile) {
-  //   return <BurgerMenu pages={pages} />;
-  // }
+
   return (
     <header
       className="sticky top-0 z-10 flex flex-col relative
@@ -37,7 +37,12 @@ const Header = ({ name, pages }: HeaderProps) => {
                   <Link
                     aria-label={label}
                     href={link}
-                    className="px-6 py-2 glow-on-hover"
+                    locale="true"
+                    className={`${
+                      currentRoute === link
+                        ? "px-6 py-2 glow-on-hover active"
+                        : "px-6 py-2 glow-on-hover"
+                    }`}
                   >
                     {label}
                   </Link>
@@ -46,7 +51,7 @@ const Header = ({ name, pages }: HeaderProps) => {
             </ul>
           </nav>
         )}
-        <h1 className="text-white uppercase  text-4xl">{name}</h1>
+        <h1 className="text-white uppercase  sm:text-4xl text-2xl">{name}</h1>
       </div>
     </header>
   );
