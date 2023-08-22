@@ -24,7 +24,7 @@ const ProjectCart = ({ project }: ProjectCartProps) => {
         src={`/images/${image}`}
         width={500}
         height={250}
-        className="object-fill w-full h-48"
+        className="object-cover w-full h-48"
       />
       <div className="p-4">
         <h3 className="text-lg font-medium">{title}</h3>
