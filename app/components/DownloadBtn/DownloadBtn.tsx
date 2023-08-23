@@ -10,10 +10,13 @@ const DownloadBtn = () => {
   };
   return (
     <div className="flex aline-center justify-center sm:justify-start">
-      <Link href={"/cv/AnastasiiaCV.pdf"} passHref>
+      <Link
+        href="https://anastasiia-yaitska-portfolio-dev.vercel.app/cv/AnastasiiaCV.pdf"
+        passHref
+      >
         <a
-          href="./../../../public/cv/Anastasia.CV.pdf"
-          download="AnastassiaYaitskaCV.pdf"
+          href="https://anastasiia-yaitska-portfolio-dev.vercel.app/cv/AnastasiiaCV.pdf"
+          download
           onClick={handleClick}
           className={isClicked ? " clickButton clicked" : "clickButton"}
         >
