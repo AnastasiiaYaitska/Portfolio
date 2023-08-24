@@ -17,7 +17,7 @@ type ProjectCartProps = {
 const ProjectCart = ({ project }: ProjectCartProps) => {
   const { title, body, tools, image, links } = project;
   return (
-    <li className="rounded-lg shadow-footer w-full md:w-2/3-g sm:w-1/3-g card-on-hover">
+    <li className="rounded-lg shadow-footer w-full md:w-2/3-g sm:w-1/3-g card-on-hover overflow-hidden ">
       <Image
         alt={`Image of ${title}`}
         aria-label={`Image of ${title}`}
