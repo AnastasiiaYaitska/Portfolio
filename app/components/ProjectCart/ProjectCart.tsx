@@ -36,6 +36,7 @@ const ProjectCart = ({ project }: ProjectCartProps) => {
               <Link
                 href={url}
                 className="flex flex-row flex-wrap justify-center items-center gap-3"
+                target="_blank"
               >
                 {title.includes("code") ? <TfiGithub /> : <BsWindow />}
                 <span>{title}</span>
