@@ -11,7 +11,7 @@ const DownloadBtn = () => {
   return (
     <div className="flex aline-center justify-center sm:justify-start">
       <Link
-        href="./cv/AnastasiasCV.2.pdf"
+        href="./cv/_CV_.pdf"
         download
         onClick={handleClick}
         className={isClicked ? " clickButton clicked" : "clickButton"}

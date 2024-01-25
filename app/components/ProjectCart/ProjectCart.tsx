@@ -33,14 +33,24 @@ const ProjectCart = ({ project }: ProjectCartProps) => {
         <ul className="flex flex-row mt-4 justify-between">
           {links.map(({ title, url }) => (
             <li key={url} className="flex flex-row ">
-              <Link
-                href={url}
-                className="flex flex-row flex-wrap justify-center items-center gap-3"
-                target="_blank"
-              >
-                {title.includes("code") ? <TfiGithub /> : <BsWindow />}
-                <span>{title}</span>
-              </Link>
+              {url === "" ? (
+                <button
+                  className="flex flex-row flex-wrap justify-center items-center gap-3"
+                  disabled
+                >
+                  <BsWindow />
+                  <span>Live site not available</span>
+                </button>
+              ) : (
+                <Link
+                  href={url}
+                  className="flex flex-row flex-wrap justify-center items-center gap-3"
+                  target="_blank"
+                >
+                  {title.includes("code") ? <TfiGithub /> : <BsWindow />}
+                  <span>{title}</span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
